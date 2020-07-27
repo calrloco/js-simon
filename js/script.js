@@ -18,7 +18,6 @@ function checkArrays(arr, arr1) {
   alert(
     "Nel gioco dovrai inserire i cinque numeri visti prima i numeri devono essere compresi fra 1 e 100 e non si possono ripetere i numeri con la virgola non sono ammessi"
   );
-  console.log(numeriCasuali);
   for (var i = 0; i < arr.length; i++) {
     var numero = Math.round(
       parseInt(prompt("inserisci un numero: " + "tentativo n: " + (i + 1)))
