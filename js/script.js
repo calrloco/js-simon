@@ -1,7 +1,7 @@
 var numeriCasuali = [];
 var numeriUtente = [];
 // timer
-var clock = 30000;
+var clock = 3;
 // inserisco numeri random
 while (numeriCasuali.length < 5) {
   var numRandom = getRandomIntInclusive(1, 100);
@@ -11,6 +11,9 @@ while (numeriCasuali.length < 5) {
 }
 // visualizzo numeri casuali e avvio il timer
 alert("Ricordati questi cinque numeri " + numeriCasuali);
+$(document).ready(function(){
+  
+});
 setTimeout(checkArrays, clock, numeriCasuali, numeriUtente);
 // funzione di gioco
 function checkArrays(arr, arr1) {
