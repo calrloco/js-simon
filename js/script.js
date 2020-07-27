@@ -22,7 +22,7 @@ function checkArrays(arr, arr1) {
     var numero = Math.round(
       parseInt(prompt("inserisci un numero: " + "tentativo n: " + (i + 1)))
     );
-    // se passa i controlli entra nelláltro if
+    // se passa i controlli entra nell'altro if
     if (
       numero > 0 &&
       numero <= 100 &&
