@@ -1,7 +1,15 @@
 var numeriCasuali = [];
 var numeriUtente = [];
+var risultato;
+$(document).ready(function(){
+$('.risultato-text').text(risultato);
+$('.risultato').addClass('active');
+$('.replay').click(function(){
+   location.reload();
+});
+})
 // timer
-var clock = 30000;
+var clock = 0;
 // inserisco numeri random
 while (numeriCasuali.length < 5) {
   var numRandom = getRandomIntInclusive(1, 100);
@@ -45,21 +53,21 @@ function checkArrays(arr, arr1) {
   }
   // comunica il risultato
   if (arr1.length > 0 && arr1.length < arr.length) {
-    alert(
+    risultato =
       "hai ricordato " +
         arr1.length +
-        " numeri su " +
+        " n. su " +
         arr.length +
-        " i numeri sono: " +
+        ": " +
         arr1
-    );
+   
   } else if (arr1.length == arr.length) {
-    alert("Bravo!! hai ricordato tutti i numeri che sono: " + arr1);
+   risultato = "Bravo!! hai ricordato tutti i numeri che sono: " + arr1;
   } else {
-    alert("Non hai ricordato nessun numero rietenta sarai piu fortunato");
+    risultato = "Non hai ricordato nessun numero ritenta sarai piu fortunato";
   }
-  location.reload();
+  
 }
 function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+} 
