@@ -1,7 +1,7 @@
 var numeriCasuali = [];
 var numeriUtente = [];
 // timer
-var clock = 30000;
+var clock = 0;
 // inserisco numeri random
 while (numeriCasuali.length < 5) {
   var numRandom = getRandomIntInclusive(1, 100);
