@@ -11,9 +11,6 @@ while (numeriCasuali.length < 5) {
 }
 // visualizzo numeri casuali e avvio il timer
 alert("Ricordati questi cinque numeri " + numeriCasuali);
-$(document).ready(function(){
-  
-});
 setTimeout(checkArrays, clock, numeriCasuali, numeriUtente);
 // funzione di gioco
 function checkArrays(arr, arr1) {
