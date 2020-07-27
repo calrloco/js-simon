@@ -1,7 +1,7 @@
 var numeriCasuali = [];
 var numeriUtente = [];
 // timer
-var clock = 3000;
+var clock = 30000;
 // inserisco numeri random
 while (numeriCasuali.length < 5) {
   var numRandom = getRandomIntInclusive(1, 100);
@@ -47,7 +47,7 @@ function checkArrays(arr, arr1) {
         arr1.length +
         " numeri su " +
         arr.length +
-        " i numeri indovinati sono: " +
+        " i numeri sono: " +
         arr1
     );
   } else if (arr1.length == arr.length) {
