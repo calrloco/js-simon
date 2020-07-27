@@ -1,7 +1,7 @@
 var numeriCasuali = [];
 var numeriUtente = [];
 // timer
-var clock = 30000;
+var clock = 3000;
 // inserisco numeri random
 while (numeriCasuali.length < 5) {
   var numRandom = getRandomIntInclusive(1, 100);
@@ -18,6 +18,7 @@ function checkArrays(arr, arr1) {
   alert(
     "Nel gioco dovrai inserire i cinque numeri visti prima i numeri devono essere compresi fra 1 e 100 e non si possono ripetere i numeri con la virgola non sono ammessi"
   );
+  console.log(numeriCasuali);
   for (var i = 0; i < arr.length; i++) {
     var numero = Math.round(
       parseInt(prompt("inserisci un numero: " + "tentativo n: " + (i + 1)))
@@ -50,7 +51,7 @@ function checkArrays(arr, arr1) {
         arr1
     );
   } else if (arr1.length == arr.length) {
-    alert("Bravo!! hai rordato tutti i numeri che sono: " + arr1);
+    alert("Bravo!! hai ricordato tutti i numeri che sono: " + arr1);
   } else {
     alert("Non hai ricordato nessun numero rietenta sarai piu fortunato");
   }
