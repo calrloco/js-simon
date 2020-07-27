@@ -25,7 +25,7 @@ function checkArrays(arr, arr1) {
     // se passa i controlli entra nelláltro if
     if (
       numero > 0 &&
-      numero < 100 &&
+      numero <= 100 &&
       !isNaN(numero) &&
       (!arr1.includes(numero))
     ) {
