@@ -1,15 +1,7 @@
 var numeriCasuali = [];
 var numeriUtente = [];
-var risultato;
-$(document).ready(function(){
-$('.risultato-text').text(risultato);
-$('.risultato').addClass('active');
-$('.replay').click(function(){
-   location.reload();
-});
-})
 // timer
-var clock = 30000;
+var clock = 3;
 // inserisco numeri random
 while (numeriCasuali.length < 5) {
   var numRandom = getRandomIntInclusive(1, 100);
@@ -50,21 +42,22 @@ function checkArrays(arr, arr1) {
       alert("Inserire un numero sempre diverso compreso fra 1 e 100");
       i--;
     }
+    location.reload();
   }
   // comunica il risultato
   if (arr1.length > 0 && arr1.length < arr.length) {
-    risultato =
+    alert(
       "hai ricordato " +
         arr1.length +
         " n. su " +
         arr.length +
         ": " +
         arr1
-   
+      );
   } else if (arr1.length == arr.length) {
-   risultato = "Bravo!! hai ricordato tutti i numeri che sono: " + arr1;
+   alert( "Bravo!! hai ricordato tutti i numeri che sono: " + arr1);
   } else {
-    risultato = "Non hai ricordato nessun numero ritenta sarai piu fortunato";
+    alert("Non hai ricordato nessun numero ritenta sarai piu fortunato");
   }
   
 }
