@@ -45,7 +45,7 @@ function checkArrays(arr, arr1) {
       alert("Inserire un numero sempre diverso compreso fra 1 e 100");
       i--;
     }
-    location.reload();
+    
   }
   // comunica il risultato
   if (arr1.length > 0 && arr1.length < arr.length) {
@@ -62,7 +62,7 @@ function checkArrays(arr, arr1) {
   } else {
     alert("Non hai ricordato nessun numero ritenta sarai piu fortunato");
   }
-  
+  location.reload();
 }
 function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
