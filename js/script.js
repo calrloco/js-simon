@@ -18,12 +18,12 @@ function checkArrays(arr, arr1) {
   alert(
     "Nel gioco dovrai inserire i cinque numeri visti prima i numeri devono essere compresi fra 1 e 100 e non si possono ripetere i numeri con la virgola non sono ammessi"
   );
-  var numeriSbagliati =[];
+  var numeriSbagliati = [];
   for (var i = 0; i < arr.length; i++) {
     var numero = Math.round(
       parseInt(prompt("inserisci un numero: " + "tentativo n: " + (i + 1)))
     );
-   // se passa i controlli entra nell'altro if
+    // se passa i controlli entra nell'altro if
     if (
       numero > 0 &&
       numero <= 100 &&
@@ -34,7 +34,7 @@ function checkArrays(arr, arr1) {
       //pusha il numero se icluso nel primo array
       if (arr.includes(numero)) {
         arr1.push(numero);
-      } else{
+      } else {
         numeriSbagliati.push(numero);
       }
     } else {
@@ -42,20 +42,12 @@ function checkArrays(arr, arr1) {
       alert("Inserire un numero sempre diverso compreso fra 1 e 100");
       i--;
     }
-    
   }
   // comunica il risultato
   if (arr1.length > 0 && arr1.length < arr.length) {
-    alert(
-      "hai ricordato " +
-        arr1.length +
-        " n. su " +
-        arr.length +
-        ": " +
-        arr1
-      );
+    alert("hai ricordato " + arr1.length + " n. su " + arr.length + ": " + arr1);
   } else if (arr1.length == arr.length) {
-   alert( "Bravo!! hai ricordato tutti i numeri che sono: " + arr1);
+    alert("Bravo!! hai ricordato tutti i numeri che sono: " + arr1);
   } else {
     alert("Non hai ricordato nessun numero ritenta sarai piu fortunato");
   }
@@ -63,4 +55,4 @@ function checkArrays(arr, arr1) {
 }
 function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
-} 
+}
