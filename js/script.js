@@ -1,7 +1,7 @@
 var numeriCasuali = [];
 var numeriUtente = [];
 // timer
-var clock = 30000;
+var clock = 3;
 // inserisco numeri random
 while (numeriCasuali.length < 5) {
   var numRandom = getRandomIntInclusive(1, 100);
@@ -14,6 +14,7 @@ alert("Ricordati questi cinque numeri " + numeriCasuali);
 setTimeout(checkArrays, clock, numeriCasuali, numeriUtente);
 // funzione di gioco
 function checkArrays(arr, arr1) {
+  var numeriInseriti =[];
   // regole
   alert(
     "Nel gioco dovrai inserire i cinque numeri visti prima i numeri devono essere compresi fra 1 e 100 e non si possono ripetere i numeri con la virgola non sono ammessi"
@@ -22,16 +23,19 @@ function checkArrays(arr, arr1) {
     var numero = Math.round(
       parseInt(prompt("inserisci un numero: " + "tentativo n: " + (i + 1)))
     );
-    // se passa i controlli entra nell'altro if
+   // se passa i controlli entra nell'altro if
     if (
       numero > 0 &&
       numero <= 100 &&
       !isNaN(numero) &&
-      (!arr1.includes(numero))
+      !numeriInseriti.includes(numero) &&
+      !arr1.includes(numero)
     ) {
       //pusha il numero se icluso nel primo array
       if (arr.includes(numero)) {
         arr1.push(numero);
+      } else{
+        numeriInseriti.push(numero);
       }
     } else {
       // altrimente chiede di inserire valori corretti
